@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.a2e258a8.css","mappings":"AACA,EAGE,qBAAsB,CAFtB,QAAS,CACT,SAEF,CAGA,cACE,sCACF","sources":["index.css"],"sourcesContent":["/* Reset */\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n/* Body */\nbody, textarea {\n  font-family: Arial, Helvetica, sans-serif;\n}"],"names":[],"sourceRoot":""}
