@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/macro/Header";
+import Main from "./components/macro/Main";
+import { ModalContext } from "./components/partials/Modal";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.openCloseModal = () => {
+      this.setState(state => ({...state, modal: !state.modal}))
+    }
+    this.state = {
+      modal: false,
+      openCloseModal: this.openCloseModal
+    }
+  }
+  render() {
+    return (
+      <ModalContext.Provider value={this.state}>
+        <Header/>
+        <Main/>
+      </ModalContext.Provider>
+    )
+  }
 }
-
-export default App;
